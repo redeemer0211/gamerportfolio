@@ -9,10 +9,32 @@
   <style>
     body {
       background-color: #1a202c;
-      color: white;
+      color: black;
       font-family: sans-serif;
     }
 
+.banner-circle {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  background-color: white;
+  border: 4px solid white;
+  z-index: 20;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
     .banner {
       width: 100%;
       height: 30vh;
@@ -39,7 +61,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
-      height: auto;
+      height: 10%;
       min-height: 100%;
       object-fit: cover;
       user-select: none;
@@ -47,15 +69,13 @@
       cursor: grab;
     }
 
-    .banner.dragging {
-      cursor: grabbing;
-    }
 
     .streaming-stats {
       width: 70%;
       padding: 1.5rem;
       overflow-y: auto;
       margin-left: 5%;
+      background-color: #1a202c;
     }
 
     .title {
@@ -63,6 +83,7 @@
       font-weight: bold;
       margin-bottom: 1rem;
       text-align: center;
+      color: white;
     }
 
     .flex-container {
@@ -74,7 +95,7 @@
 
     .stat-container {
       width: 30%;
-      background-color: #2d3748; /* equivalent to bg-gray-800 */
+      background-color: white; /* equivalent to bg-gray-800 */
       padding: 1rem;
       border-radius: 0.375rem; /* rounded-lg */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
@@ -85,6 +106,7 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
       text-align: center;
+      color: black;
     }
 
     .stat-list {
@@ -145,7 +167,7 @@
 }
 
 .profile-link:hover {
-  color: #9b3dd1; /* hover:text-purple-400 */
+  color: red; /* hover:text-purple-400 */
 }
 
 /* Top Supporters Section */
@@ -169,13 +191,211 @@
   height: 100%;
 }
 
+.profile-intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border: 4px solid white;
+  background-color: #2d3748;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Spin animation */
+.spin {
+  animation: spinAnimation 6s ease-in-out;
+}
+
+@keyframes spinAnimation {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(1080deg); } /* 3 full spins */
+}
+
+/* Final position on banner */
+.profile-final {
+position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  background-color: #2d3748;
+  border: 4px solid white;
+  z-index: 20;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.door {
+  position: fixed;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1000;
+  transition: transform 1s ease-in-out;
+}
+
+.left-door {
+  left: 0;
+  background-image: url(./images/leftdoor.PNG);
+}
+
+.right-door {
+  right: 0;
+  background-image: url(./images/rightdoor.PNG)
+}
+
+/* Door open animations */
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+/* Profile Image Center Start */
+.profile-intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  border: 4px solid white;
+  background-color: #2d3748;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.profile-intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Spin animation */
+.spin {
+  animation: spinAnimation 1s ease-in-out;
+}
+
+@keyframes spinAnimation {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(1080deg); }
+}
+
+/* Final position of profile pic */
+.profile-final {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  transform: none !important;
+  width: 17vh;
+  height: 17vh;
+  transition: all 0.7s ease-in-out;
+  z-index: 20;
+}
+
+.rhombus-container {
+  position: absolute;
+  top: -120%;
+  right: -1%; /* Align container to the right */
+  display: flex; /* Proper use of flex */
+  flex-direction: row; /* Place rhombuses side by side */
+  gap: 0; /* Adds space between rhombuses */
+  padding: 0;
+}
+
+.rhombus {
+  width: 220px; /* Fixed width for each rhombus */
+  height: 1000px; /* Fixed height for each rhombus */
+  background-color: white;
+  transform: skewY(0deg); /* Slant the side vertically */
+  border: 0.5px solid black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.rhombus:hover {
+  transform: scale(1.3); /* Slightly bigger on hover */
+}
+
+.rhombus1 {
+  background-image: url('./images/Khazan.webp');
+  background-size:auto;
+  background-position: center;
+  background-position-y: center;
+}
+.rhombus2 {
+  background-image: url('./images/bloodborne.webp');
+  background-size: auto;
+  background-position: center;
+  background-position-y: -5px;
+}
+.rhombus3 {
+  background-image: url('./images/Sekiro.webp');
+  background-size: auto;
+  background-position: center;
+  background-position-y: 900px;
+  background-position-x: -900px ;
+}
+.rhombus4 {
+  background-image: url('./images/wallpaperflare.com_wallpaper\ \(7\).jpg');
+  background-size: auto;
+  background-position: center;
+}
+
   </style>
 </head>
 <body>
+    <div id="door-left" img src="./images/leftdoor.PNG"  class="door left-door"></div>
+    <div id="door-right" img src="./images/rightdoor.PNG" class="door right-door"></div>
+    
+    <!-- Profile Intro Animation -->
+    <div class="profile-intro" id="profileIntro">
+      <img src="./images/mypic.png" alt="Profile Picture" />
+    </div>
+    
+    <!-- Main Content Hidden Initially -->
+    <div id="homepageContent" style="opacity: 0; transition: opacity 1s ease-in-out;">
+      <!-- Your existing homepage content goes here -->
+    </div>
   <!-- Banner -->
   <header class="banner" id="banner">
     <img src="./images/Banner.png" alt="Banner" id="bannerImg"/>
+    <!-- Circle part -->
+    <Aside>
+      <div class="rhombus-container">
+        <div  class="rhombus rhombus1">1</div>
+        <div  class="rhombus rhombus2">2</div>
+        <div class="rhombus rhombus3">3</div>
+        <div class="rhombus rhombus4">4</div>
+      </div>
+  </Aside>
   </header>
+  
+
+  
 
   <!-- Main Content -->
   <main class="flex h-[100%]">
@@ -287,16 +507,7 @@
     let isDragging = false;
     let startY, currentY = 0;
 
-    banner.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      startY = e.clientY - currentY;
-      banner.classList.add('dragging');
-    });
 
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-      banner.classList.remove('dragging');
-    });
 
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
@@ -312,9 +523,37 @@
         bannerImg.style.top = currentY + 'px';
       }
     });
+
+    const profileIntro = document.getElementById('profileIntro');
+  const doorLeft = document.getElementById('door-left');
+  const doorRight = document.getElementById('door-right');
+  const homepageContent = document.getElementById('homepageContent');
+
+  profileIntro.addEventListener('click', () => {
+    // Spin the profile picture
+    profileIntro.classList.add('spin');
+
+    // Wait for spin to finish, then open doors
+    setTimeout(() => {
+      profileIntro.classList.remove('spin');
+      profileIntro.classList.add('profile-final');
+
+      // Slide doors
+      doorLeft.classList.add('slide-left');
+      doorRight.classList.add('slide-right');
+
+      // Reveal homepage content after doors open
+      setTimeout(() => {
+        homepageContent.style.opacity = 1;
+        // Optional: remove the doors from DOM after animation
+        doorLeft.style.display = 'none';
+        doorRight.style.display = 'none';
+      }, 2000);
+    }, 2000);
+  });
+
+
+
   </script>
 </body>
 </html>
-
-
-
