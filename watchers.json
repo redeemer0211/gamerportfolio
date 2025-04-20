@@ -5,31 +5,31 @@
     },
     {
         "Name": "HitchBlitz",
-        "WatchHours": "20.55"
+        "WatchHours": "21.55"
     },
     {
         "Name": "LesterNgPinas",
         "WatchHours": "16.21"
     },
     {
-        "Name": "jeff",
-        "WatchHours": "12.5"
+        "Name": "Miro",
+        "WatchHours": "15.56"
     },
     {
-        "Name": "Miro",
-        "WatchHours": "13.45"
+        "Name": "jeff",
+        "WatchHours": "12.5"
     },
     {
         "Name": "erlindamangubat",
         "WatchHours": "10.12"
     },
     {
-        "Name": "maraea",
-        "WatchHours": "8.2"
+        "Name": "Pirate Empress",
+        "WatchHours": "8.66"
     },
     {
-        "Name": "Pirate Empress",
-        "WatchHours": "8.5"
+        "Name": "maraea",
+        "WatchHours": "8.2"
     },
     {
         "Name": "poa",
@@ -40,28 +40,32 @@
         "WatchHours": "6.15"
     },
     {
+        "Name": "Toki",
+        "WatchHours": "6.07"
+    },
+    {
         "Name": "Marson Soon",
         "WatchHours": "5.45"
+    },
+    {
+        "Name": "Beladur",
+        "WatchHours": "4.56"
     },
     {
         "Name": "The Shopkeeper",
         "WatchHours": "4.55"
     },
     {
-        "Name": "Toki",
-        "WatchHours": "5.49"
-    },
-    {
-        "Name": "Ogan Lexus",
-        "WatchHours": "4.15"
-    },
-    {
         "Name": "Just Kenneth",
         "WatchHours": "4.5"
     },
     {
-        "Name": "Beladur",
-        "WatchHours": "4.56"
+        "Name": "Knight",
+        "WatchHours": "4.68"
+    },
+    {
+        "Name": "Ogan Lexus",
+        "WatchHours": "4.15"
     },
     {
         "Name": "neema",
@@ -69,15 +73,11 @@
     },
     {
         "Name": "lukas",
-        "WatchHours": "3.59"
+        "WatchHours": "4.14"
     },
     {
         "Name": "Natoy",
         "WatchHours": "3.51"
-    },
-    {
-        "Name": "Knight",
-        "WatchHours": "4.5"
     },
     {
         "Name": "Yoda",
@@ -88,8 +88,16 @@
         "WatchHours": "3.2"
     },
     {
+        "Name": "Crisjuancho",
+        "WatchHours": "2.6"
+    },
+    {
         "Name": "SHIM",
         "WatchHours": "2.46"
+    },
+    {
+        "Name": "Siomai",
+        "WatchHours": "2.4"
     },
     {
         "Name": "Happy Failed",
@@ -100,19 +108,39 @@
         "WatchHours": "2.37"
     },
     {
-        "Name": "Crisjuancho",
-        "WatchHours": "2.6"
-    },
-    {
-        "Name": "Siomai",
-        "WatchHours": "2.4"
-    },
-    {
         "Name": "The Fluffy Addition",
         "WatchHours": "1.57"
     },
     {
         "Name": "_chrollo_",
-        "WatchHours": "1.55"
+        "WatchHours": "2.75"
+    },
+    {
+        "Name": "Migo",
+        "WatchHours": "5.12"
+    },
+    {
+        "Name": "Liam",
+        "WatchHours": "0.45"
+    },
+    {
+        "Name": "Tsukii",
+        "WatchHours": "0.44"
+    },
+    {
+        "Name": "KalapatiNiChangli",
+        "WatchHours": "0.32"
+    },
+    {
+        "Name": "John Lee",
+        "WatchHours": "0.31"
+    },
+    {
+        "Name": "Jeygo The Dawg",
+        "WatchHours": "0.29"
+    },
+    {
+        "Name": "Xianlei",
+        "WatchHours": "0.23"
     }
 ]
